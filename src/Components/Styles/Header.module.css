@@ -1,0 +1,20 @@
+.header {
+    background-color: #2F4858;
+    padding: 0.5rem 2rem; 
+}
+
+.flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navLink {
+    color: #F9F9F9;
+    text-decoration: none;
+}
+
+.logo {
+    height: 40px;
+    padding: 0;
+}

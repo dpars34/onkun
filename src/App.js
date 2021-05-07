@@ -1,25 +1,49 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react'
 import './App.css';
+import SearchBar from "./Components/SearchBar"
+import ResultCard from "./Components/ResultCard"
+import Header from "./Components/Header"
 
 function App() {
+
+  const [ data, setData ] = useState([])
+  const [ search, setSearch ] = useState("")
+  const [ query, setQuery ] = useState("")
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await fetch(`https://kanjiapi.dev/v1/kanji/${query}`)
+        const data = await response.json()
+        setData(data)
+        console.log(data)
+      } 
+      catch (e) {
+        console.log(e)
+      }
+    }
+    getData()
+  }, [query])
+
+  const handleChange = e => {
+    setSearch(e.target.value)
+    console.log(e.target.value)
+  }
+
+  const handleClick = e => {
+    e.preventDefault()
+    setQuery(search)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <SearchBar handleClick={handleClick} handleChange={handleChange} search={search}/>
+      <ResultCard data={data}/>
     </div>
-  );
-}
+      
+    )
+  }
+
 
 export default App;
