@@ -3,7 +3,7 @@
 .kanjiTitle {
     color: #050505;
     font-size: 3rem;
-    margin: 0;
+    margin: 0 0 0 1rem;
 }
 
 .resultCard {
@@ -14,14 +14,14 @@
     color: #050505;
 }
 
-.gridContainer{
-    display: grid;
-    grid-template-columns: 2fr 2fr 3fr;
+.flexContainer{
+    display: flex;
 }
 
 .kanjiInfo {
     line-height: 0.5;
     font-style: italic;
+    margin: 0 0 0 1rem;
 }
 
 /* For the middle display */
@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 50px;
-    background-image: linear-gradient(98deg, #050505 49.9%, #B0000F 50%);
+    background-image: linear-gradient(95deg, #050505 49.9%, #B0000F 50%);
     color: #F9F9F9;
     padding: 0.5rem;
     font-weight: 600;
@@ -38,10 +38,12 @@
 
 .onYomiArea {
     margin-left: 1rem;
+    padding: 0.5rem;
 }
 
 .kunYomiArea {
     margin-left: 1rem;
+    padding: 0.5rem;
 }
 
 .onkunBoxData {

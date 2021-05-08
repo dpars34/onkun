@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./Styles/SearchBar.module.css"
-import { GoSearch } from 'react-icons/go';
 
 function SearchBar(props) {
     return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
 import SearchBar from "./Components/SearchBar"
-import ResultCard from "./Components/ResultCard"
+import Results from "./Components/Results"
 import Header from "./Components/Header"
 
 function App() {
@@ -14,11 +14,15 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch(`https://kanjiapi.dev/v1/kanji/${query}`)
-        const data = await response.json()
-        setData(data)
-        console.log(data)
-        setSearched(true)
+
+        const allKanjiData = []
+
+        for(let i = 0; i < query.length; i++) {
+          const response = await fetch(`https://kanjiapi.dev/v1/kanji/${query[i]}`)
+          const dataRecieved = await response.json()
+          allKanjiData.push(dataRecieved)
+        }
+        setData(allKanjiData)
       } 
       catch (e) {
         console.log(e)
@@ -33,15 +37,19 @@ function App() {
 
   const handleClick = e => {
     e.preventDefault()
-    setQuery(search)
 
+    const kanjiRegex = /[一-龯]/g
+    const kanjiFound = search.match(kanjiRegex)
+    
+    setQuery(kanjiFound)
+    setSearched(true)
   }
 
   return (
     <div>
       <Header />
       <SearchBar handleClick={handleClick} handleChange={handleChange} search={search}/>
-      {searched ? <ResultCard data={data}/> : <p>You haven't searched anything yet!</p>}
+      {searched ? <Results data={data} /> : <p>You haven't searched anything yet!</p>}
     </div>
       
     )
