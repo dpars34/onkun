@@ -9,6 +9,7 @@ function App() {
   const [ data, setData ] = useState([])
   const [ search, setSearch ] = useState("")
   const [ query, setQuery ] = useState("")
+  const [ searched, setSearched ] = useState(false)
 
   useEffect(() => {
     const getData = async () => {
@@ -17,6 +18,7 @@ function App() {
         const data = await response.json()
         setData(data)
         console.log(data)
+        setSearched(true)
       } 
       catch (e) {
         console.log(e)
@@ -27,19 +29,19 @@ function App() {
 
   const handleChange = e => {
     setSearch(e.target.value)
-    console.log(e.target.value)
   }
 
   const handleClick = e => {
     e.preventDefault()
     setQuery(search)
+
   }
 
   return (
     <div>
       <Header />
       <SearchBar handleClick={handleClick} handleChange={handleChange} search={search}/>
-      <ResultCard data={data}/>
+      {searched ? <ResultCard data={data}/> : <p>You haven't searched anything yet!</p>}
     </div>
       
     )
