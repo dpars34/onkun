@@ -1,0 +1,25 @@
+.loadingArea {
+    margin: 5rem 20vw 5rem 20vw;
+    padding: 0.1rem;
+    border-radius: 50px;
+    color: #F9F9F9;
+    background-image: linear-gradient(95deg, #050505 49.9%, #B0000F 50%);
+    background-size: 250%;
+    animation: loading 3s ease infinite;
+}
+
+.mainText{
+    text-align: center;
+}
+
+@keyframes loading {
+    0% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}

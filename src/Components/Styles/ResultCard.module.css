@@ -1,3 +1,8 @@
+.resultList {
+    list-style: none;
+    padding-left: 0;
+}
+
 /* For the top display */
 
 .kanjiTitle {
@@ -7,7 +12,7 @@
 }
 
 .resultCard {
-    padding: 2rem;
+    padding: 1rem 10vw;
 }
 
 .topDisplayText {
@@ -48,4 +53,12 @@
 
 .onkunBoxData {
     display: inline;
+}
+
+/* For the bottom display */
+
+.translationArea {
+    margin-left: 1rem;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    font-style: italic;
 }

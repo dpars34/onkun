@@ -1,5 +1,5 @@
 .searchForm {
-    margin: 3rem 1rem 1rem 1rem;
+    margin: 6rem 1rem 2rem 1rem;
     text-align: center;
 }
 .searchBar {
@@ -7,14 +7,14 @@
     padding: 0.5rem 1rem;
     border-radius: 20px 0 0 20px;
     border: none;
-    background-color: #FBFBFB;
+    background-color: #E0E0E0;
 }
 
 .searchButton {
     padding: 0.5rem 1rem;
-    background-color: #FBFBFB;
+    background-color: #E0E0E0;
     border: none;
     border-radius: 0 20px 20px 0;
-    border-left: solid 2px #E0E0E0;
+    border-left: solid 2px #FBFBFB;
     color: #050505;
 }

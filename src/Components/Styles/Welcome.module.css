@@ -1,0 +1,9 @@
+.welcomeArea {
+    margin : 0.5rem 10vw 2rem 10vw;
+}
+
+.link {
+    color: #B0000F;
+    text-decoration: none;
+    font-weight: 600;
+}

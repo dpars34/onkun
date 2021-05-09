@@ -11,7 +11,6 @@ function Header() {
                     <img src={logo} alt="logo" className={styles.logo}/>
                 </a>
             </div>
-            
         </header>
     )
 }

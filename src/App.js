@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import './App.css';
-import SearchBar from "./Components/SearchBar"
-import Results from "./Components/Results"
-import Header from "./Components/Header"
+import styles from './Components/Styles/App.module.css'
+import SearchBar from './Components/SearchBar'
+import Results from './Components/Results'
+import Header from './Components/Header'
+import Welcome from './Components/Welcome'
+import NoResults from './Components/NoResults'
+import Loading from './Components/Loading'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -10,11 +14,14 @@ function App() {
   const [ search, setSearch ] = useState("")
   const [ query, setQuery ] = useState("")
   const [ searched, setSearched ] = useState(false)
+  const [ isLoading, setIsLoading ] = useState(false)
+  const [ failed, setFailed ] = useState(false)
 
   useEffect(() => {
     const getData = async () => {
       try {
 
+        setIsLoading(true)
         const allKanjiData = []
 
         for(let i = 0; i < query.length; i++) {
@@ -23,12 +30,17 @@ function App() {
           allKanjiData.push(dataRecieved)
         }
         setData(allKanjiData)
+        setIsLoading(false)
+        setFailed(false)
       } 
       catch (e) {
         console.log(e)
+        setIsLoading(false)
+        setFailed(true)
       }
     }
     getData()
+
   }, [query])
 
   const handleChange = e => {
@@ -46,14 +58,20 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
+      
       <Header />
-      <SearchBar handleClick={handleClick} handleChange={handleChange} search={search}/>
-      {searched ? <Results data={data} /> : <p>You haven't searched anything yet!</p>}
+
+      <div className={styles.contentWrap}>
+        <SearchBar handleClick={handleClick} handleChange={handleChange} search={search}/>
+        {!searched ? <Welcome /> : isLoading ? <Loading /> : failed ? <NoResults /> : <Results data={data} /> } 
+      </div>
+
+    <Footer />
+      
     </div>
       
     )
   }
-
 
 export default App;

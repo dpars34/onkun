@@ -1,6 +1,10 @@
 .header {
     background-color: #FBFBFB;
-    padding: 0.5rem 2rem; 
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #E0E0E0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .flexContainer {

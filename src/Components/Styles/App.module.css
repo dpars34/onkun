@@ -1,0 +1,9 @@
+.pageContainer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.contentWrap {
+    flex: 1;
+}
