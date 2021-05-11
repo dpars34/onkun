@@ -38,5 +38,18 @@
     .smallWelcome {
         margin-top : 3rem;
     }
+
+    .bigWelcome::before {
+        content: "";
+        height: 800px;
+        width: 800px;
+        background-color: #B0000F;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        left: 65rem;
+        bottom: 0rem;
+        z-index: -1;
+    } 
 }
 

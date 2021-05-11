@@ -32,8 +32,7 @@
 /* For the middle display */
 
 .onkunBox {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     border-radius: 50px;
     background-image: linear-gradient(95deg, #050505 49.9%, #B0000F 50%);
     color: #F9F9F9;
@@ -44,19 +43,17 @@
 .onYomiArea {
     margin-left: 1rem;
     padding: 0.5rem;
+    width: 100%;
 }
 
 .kunYomiArea {
     margin-left: 1rem;
     padding: 0.5rem;
+    width: 100%;
 }
 
 .onkunBoxData {
     display: inline;
-}
-
-@media (min-device-width: 500px) {
-   
 }
 
 /* For the bottom display */
