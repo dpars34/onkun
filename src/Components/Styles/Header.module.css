@@ -10,15 +10,30 @@
 .flexContainer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .navLink {
-    color: #050505;
-    text-decoration: none;
+    display: none;
 }
 
 .logo {
     height: 40px;
     padding: 0;
+}
+
+@media (min-device-width: 500px) {
+
+    .flexContainer {
+        justify-content: left;
+        margin-left: 10vw;
+    }
+    
+    .navLink {
+        display: block;
+        color: #050505;
+        text-decoration: none;
+        padding: 0;
+        margin-left: 2rem;
+    }
 }

@@ -7,3 +7,36 @@
     text-decoration: none;
     font-weight: 600;
 }
+
+.welcomeHr {
+    display: none;
+}
+
+@media (min-device-width: 500px) {
+    .bigWelcome {
+        line-height: 5rem;
+        min-height: 25rem;
+    }
+    
+    .bigBigText {
+        font-size: 7rem;
+    }
+    
+    .bigText {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+
+    .welcomeHr {
+        display: block;
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(95deg, #050505 49.9%, #B0000F 50%);
+
+    }
+
+    .smallWelcome {
+        margin-top : 3rem;
+    }
+}
+

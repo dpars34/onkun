@@ -10,6 +10,9 @@ function Header() {
                 <a href="top">
                     <img src={logo} alt="logo" className={styles.logo}/>
                 </a>
+                <a className={styles.navLink} href="top">Welcome</a>
+                <p className={styles.navLink}>Who made this site?</p>
+                <p className={styles.navLink}>About the API</p>
             </div>
         </header>
     )

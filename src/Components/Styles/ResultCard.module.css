@@ -55,10 +55,14 @@
     display: inline;
 }
 
+@media (min-device-width: 500px) {
+   
+}
+
 /* For the bottom display */
 
 .translationArea {
     margin-left: 1rem;
-    padding: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem;
     font-style: italic;
 }
