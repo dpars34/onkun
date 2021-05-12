@@ -4,10 +4,15 @@ import styles from './Styles/Welcome.module.css'
 function Welcome() {
     return(
         <div className={styles.welcomeArea}>
+
+                <div className={styles.redCircle}></div>
+
             <div className={styles.bigWelcome}>
                 <h1 className={styles.bigBigText}>Welcome</h1>
                 <p className={styles.bigText}>OnKun is the simple kanji dictionary.
-                <br /> Start by searching for kanji using the search bar.</p>
+                <br /> 
+                <div className={styles.ghostDiv}></div> 
+                Start by searching for kanji using the search bar.</p>
                 <br />
             </div>
 

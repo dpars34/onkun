@@ -41,12 +41,14 @@
 }
 
 .onYomiArea {
+    margin: auto;
     margin-left: 1rem;
     padding: 0.5rem;
     width: 100%;
 }
 
 .kunYomiArea {
+    margin: auto;
     margin-left: 1rem;
     padding: 0.5rem;
     width: 100%;
@@ -54,6 +56,34 @@
 
 .onkunBoxData {
     display: inline;
+}
+
+.onKanji {
+    display: none;
+}
+
+.kunKanji {
+    display: none;
+}
+
+@media (min-device-width: 800px) {
+    .onKanji {
+        display: block;
+        font-size: 2rem;
+        margin: auto;
+        padding: 0 1rem;
+        font-weight: lighter;
+        color: #8B6E26
+    }
+
+    .kunKanji {
+        display: block;
+        font-size: 2rem;
+        margin: auto;
+        padding: 0 1rem;
+        font-weight: lighter;
+        color: #B8860B;
+    }
 }
 
 /* For the bottom display */

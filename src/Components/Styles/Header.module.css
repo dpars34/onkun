@@ -23,7 +23,7 @@
     padding: 0;
 }
 
-@media (min-device-width: 500px) {
+@media (min-device-width: 800px) {
 
     .flexContainer {
         justify-content: left;

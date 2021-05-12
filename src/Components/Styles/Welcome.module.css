@@ -1,5 +1,5 @@
 .welcomeArea {
-    margin : 0.5rem 10vw 2rem 10vw;
+    margin : 0.5rem 10vw 0 10vw;
 }
 
 .link {
@@ -9,10 +9,32 @@
 }
 
 .welcomeHr {
-    display: none;
+    display: block;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(95deg, #050505 49.9%, #B0000F 50%);
+
 }
 
-@media (min-device-width: 500px) {
+.bigBigText {
+    font-size: 4rem;
+}
+
+.bigText {
+    font-size: 1.5rem;
+}
+
+.bigBigText::after {
+        content: ".";
+        color: #B0000F; 
+    }
+
+.ghostDiv {
+    height: 1rem;
+}
+
+@media (min-device-width: 800px) {
+
     .bigWelcome {
         line-height: 5rem;
         min-height: 25rem;
@@ -27,29 +49,24 @@
         line-height: 4rem;
     }
 
-    .welcomeHr {
-        display: block;
-        border: 0;
-        height: 2px;
-        background-image: linear-gradient(95deg, #050505 49.9%, #B0000F 50%);
-
-    }
-
     .smallWelcome {
         margin-top : 3rem;
     }
 
-    .bigWelcome::before {
-        content: "";
+    .redCircle{
         height: 800px;
         width: 800px;
         background-color: #B0000F;
         display: block;
         border-radius: 50%;
         position: absolute;
-        left: 65rem;
-        bottom: 0rem;
+        left: 82%;
+        bottom: 58%;
         z-index: -1;
+    } 
+
+    .ghostDiv {
+        display: none;
     } 
 }
 

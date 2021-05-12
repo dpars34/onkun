@@ -21,6 +21,7 @@
     padding: 0.5rem 0.5rem;
     width: 90%; /* Not perfectly center*/
     border-radius: 20px;
+    font-size: 1rem;
 }
 
 .searchButton {

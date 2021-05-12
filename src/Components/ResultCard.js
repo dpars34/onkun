@@ -28,19 +28,21 @@ function ResultCard(props) {
 
                 <div className={styles.middleDisplay}>
                     <div className={styles.onkunBox}>
+                        <p className={styles.onKanji}>音</p>
                         <div className={styles.onYomiArea}>
                             {props.data.on_readings.map((reading, index) => {
-                                return <p className={`${styles.onkunBoxData} ${index % 2 === 0 ? styles.evenResult : styles.oddResult}`}>{reading} {/*Result will get different classname depending on whether it is odd or even*/}
+                                return <p key={reading} className={`${styles.onkunBoxData} ${index % 2 === 0 ? styles.evenResult : styles.oddResult}`}>{reading} {/*Result will get different classname depending on whether it is odd or even*/}
                                 {index === (props.data.on_readings.length - 1) ? null : "、"　/* This code makes sure last comma doesnt appear */}</p>
                             })}
                         </div>
 
                         <div className={styles.kunYomiArea}>
                             {props.data.kun_readings.map((reading, index) => {
-                                return <p className={styles.onkunBoxData}>{reading}
+                                return <p key={reading} className={styles.onkunBoxData}>{reading}
                                 {index === (props.data.kun_readings.length - 1) ? null : "、"　/* This code makes sure last comma doesnt appear */}</p>
                             })}
                         </div>
+                        <p className={styles.kunKanji}>訓</p>
                     </div>
                 </div>
 

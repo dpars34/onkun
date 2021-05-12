@@ -5,5 +5,7 @@
 }
 
 .contentWrap {
+    position: relative;
+    overflow-x: hidden;
     flex: 1;
 }
