@@ -6,10 +6,10 @@ function Header() {
     return(
         <header className={styles.header}>
             <div className={styles.flexContainer}>
-                <a href="onkun.org">
+                <a href="/">
                     <img src={logo} alt="logo" className={styles.logo}/>
                 </a>
-                <a className={styles.navLink} href="onkun.org" >Welcome</a>
+                <a className={styles.navLink} href="/" >Welcome</a>
                 <a className={styles.navLink} href="https://www.danpdev.com/" target="_blank" rel="noreferrer">Who made this site?</a>
                 <a className={styles.navLink} href="https://kanjiapi.dev/" target="_blank" rel="noreferrer">About the API</a>
             </div>
