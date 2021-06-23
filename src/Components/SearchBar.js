@@ -7,7 +7,7 @@ function SearchBar(props) {
         <div className={styles.searchBox}>
             <span className={styles.searchIcon}><GoSearch/ ></span>
             <form className={styles.searchForm} onSubmit={props.handleClick}>
-                <input className={styles.searchBar} type="text" onChange={props.handleChange} value={props.search} placeholder="Search for kanji..."/>
+                <input className={styles.searchBar} type="search" onChange={props.handleChange} value={props.search} placeholder="Search for kanji..."/>
             </form>
         </div>
     )
