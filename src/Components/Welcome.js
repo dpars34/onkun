@@ -9,10 +9,10 @@ function Welcome() {
 
             <div className={styles.bigWelcome}>
                 <h1 className={styles.bigBigText}>Welcome</h1>
-                <p className={styles.bigText}>OnKun is the simple kanji dictionary.
+                <div className={styles.bigText}>OnKun is the simple kanji dictionary.
                 <br /> 
                 <div className={styles.ghostDiv}></div> 
-                Start by searching for kanji using the search bar.</p>
+                Start by searching for kanji using the search bar.</div>
                 <br />
             </div>
 
